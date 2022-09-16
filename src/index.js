@@ -51,11 +51,16 @@ btn_empty.onclick = function () {
   );
 };
 var btn_image = document.getElementById("input-image");
-btn_image.onclick = function () {
-  var _td = document.getElementById("ima");
-  var _img = document.createElement("img");
-  _img.setAttribute("id", "floatImage");
-  _img.setAttribute("src", "icon.png");
-  _img.setAttribute("onclick", "clickImage()");
-  _td.appendChild(_img);
-};
+
+btn_image.addEventListener('change',function(){
+  var td=document.getElementById("ima")
+    var img = document.createElement("img");
+    img.setAttribute("src", "img");
+    
+
+	let file = this.files[0];
+
+  img.src = URL.createObjectURL(file);
+  td.appendChild(img);
+})
+
