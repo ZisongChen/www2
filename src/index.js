@@ -56,11 +56,11 @@ btn_image.addEventListener('change',function(){
   var td=document.getElementById("ima")
     var img = document.createElement("img");
     img.setAttribute("src", "img");
-    
+    img.width=65;
+    img.height=65;
 
 	let file = this.files[0];
 
   img.src = URL.createObjectURL(file);
   td.appendChild(img);
 })
-
